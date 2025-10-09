@@ -1,3 +1,6 @@
+##video apresentacao TP1
+https://youtu.be/NpyloV69Be0
+
 Como compilar e executar
 
 Requisito: JDK 17+ instalado.
