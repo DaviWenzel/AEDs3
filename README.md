@@ -5,11 +5,11 @@ Como compilar e executar
 
 Requisito: JDK 17+ instalado.
 
-1.Limpar e compilar
+## 1.Limpar e compilar
 
 rm -rf bin dados/* mkdir -p bin javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
 
-2.Executar
+## 2.Executar
 
 java -cp "bin:lib/jnanoid-2.0.0.jar" App
 
