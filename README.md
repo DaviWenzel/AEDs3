@@ -1,36 +1,74 @@
-## video apresentacao TP1
-https://youtu.be/NpyloV69Be0
+# 🎁 PresenteFácil 1.0 — TP1 (Relacionamento 1:N)
 
-Como compilar e executar
+Sistema de linha de comando para **gestão de listas de presentes**.  
+Cada **Usuário** pode criar **N Listas**, e cada Lista possui um **código compartilhável (NanoID)** para consulta por terceiros.
 
-Requisito: JDK 17+ instalado.
+> 📽️ [Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
 
-## 1.Limpar e compilar
+---
 
-rm -rf bin dados/* mkdir -p bin javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
+## 🛠️ Como Compilar e Executar
 
-## 2.Executar
+### ✅ Requisito
+- **JDK 17+ instalado**
 
+### 🔄 1. Limpar e Compilar
+
+```bash
+rm -rf bin dados/*
+mkdir -p bin
+javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
+````
+
+### ▶️ 2. Executar
+
+```bash
 java -cp "bin:lib/jnanoid-2.0.0.jar" App
+```
 
-PresenteFácil 1.0 — TP1 (Relacionamento 1:N)
+---
 
-Sistema em linha de comando para gestão de listas de presentes. Cada Usuário pode criar N Listas, e cada Lista possui um código compartilhável (NanoID) para consulta por terceiros. Este repositório implementa o TP1: usuários + listas (sem produtos ainda).
+## 🧱 Arquitetura
 
-Arquitetura: Java + Arquivos binários + Índices
+* **Linguagem:** Java
+* **Persistência:** Arquivos binários + índices
+* **Padrão de Projeto:** MVC
 
-CRUD genérico (arquivo de dados com lápide + tamanho + bytes)
+  * `model`, `dao`, `controller`, `view`
 
-Índice direto: Hash Extensível (id → endereço)
+---
 
-Índice por e-mail: Hash Extensível (email → id)
+## 📂 Funcionalidades
 
-Relação 1:N (Usuário→Listas): Árvore B+ com chaves (idUsuario; idLista)
+* **CRUD genérico**:
 
-MVC (packages: model, dao, controller, view)
+  * Arquivo de dados com:
 
-NanoID para código compartilhável de lista
+    * Lápide
+    * Tamanho
+    * Conteúdo serializado
 
-Licença
+* **Índices**:
 
-Projeto acadêmico — uso livre para fins educacionais.
+  * **Direto**: Hash Extensível (`id → endereço`)
+  * **Secundário (email)**: Hash Extensível (`email → id`)
+  * **Relação 1:N (Usuário → Listas)**: Árvore B+ com chaves `(idUsuario; idLista)`
+
+* **Código Compartilhável de Lista**:
+
+  * Geração via [NanoID](https://github.com/aventrix/jnanoid)
+
+---
+
+## 📌 Observações
+
+* **Este repositório implementa o TP1**:
+
+  * Foco em **usuários** e **listas**
+  * **Produtos ainda não incluídos**
+
+---
+
+## 📄 Licença
+
+Projeto acadêmico — uso livre para **fins educacionais**.
