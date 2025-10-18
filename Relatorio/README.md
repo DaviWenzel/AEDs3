@@ -1,6 +1,6 @@
 # 🎁 PresenteFácil 1.0
 
-### Trabalho Prático 1 — AEDs III
+### Trabalho Prático 1 e 2 — AEDs III
 
 Sistema de Gerenciamento de Listas de Presentes
 
