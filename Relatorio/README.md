@@ -165,5 +165,5 @@ O vídeo de até **3 minutos** mostra:
 * Associação de produtos às listas
 * Busca de lista por código
 
-> 📽️[ Vídeo de Apresentação TP1] *(link do vídeo https://www.youtube.com/watch?v=NpyloV69Be0 )*
+> 📽️ [Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
 
