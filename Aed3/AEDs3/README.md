@@ -1,40 +1,74 @@
-Como compilar e executar
+# 🎁 PresenteFácil 1.0 — TP1 (Relacionamento 1:N)
 
-Requisito: JDK 17+ instalado.
+Sistema de linha de comando para **gestão de listas de presentes**.  
+Cada **Usuário** pode criar **N Listas**, e cada Lista possui um **código compartilhável (NanoID)** para consulta por terceiros.
 
-1.Limpar e compilar
+> 📽️ [Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
 
+---
+
+## 🛠️ Como Compilar e Executar
+
+### ✅ Requisito
+- **JDK 17+ instalado**
+
+### 🔄 1. Limpar e Compilar
+
+```bash
 rm -rf bin dados/*
 mkdir -p bin
 javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
+````
 
-2.Executar
+### ▶️ 2. Executar
 
+```bash
 java -cp "bin:lib/jnanoid-2.0.0.jar" App
+```
 
+---
 
-PresenteFácil 1.0 — TP1 (Relacionamento 1:N)
+## 🧱 Arquitetura
 
-Sistema em linha de comando para gestão de listas de presentes.
-Cada Usuário pode criar N Listas, e cada Lista possui um código compartilhável (NanoID) para consulta por terceiros.
-Este repositório implementa o TP1: usuários + listas (sem produtos ainda).
+* **Linguagem:** Java
+* **Persistência:** Arquivos binários + índices
+* **Padrão de Projeto:** MVC
 
-Arquitetura: Java + Arquivos binários + Índices
+  * `model`, `dao`, `controller`, `view`
 
-CRUD genérico (arquivo de dados com lápide + tamanho + bytes)
+---
 
-Índice direto: Hash Extensível (id → endereço)
+## 📂 Funcionalidades
 
-Índice por e-mail: Hash Extensível (email → id)
+* **CRUD genérico**:
 
-Relação 1:N (Usuário→Listas): Árvore B+ com chaves (idUsuario; idLista)
+  * Arquivo de dados com:
 
-MVC (packages: model, dao, controller, view)
+    * Lápide
+    * Tamanho
+    * Conteúdo serializado
 
-NanoID para código compartilhável de lista
+* **Índices**:
 
+  * **Direto**: Hash Extensível (`id → endereço`)
+  * **Secundário (email)**: Hash Extensível (`email → id`)
+  * **Relação 1:N (Usuário → Listas)**: Árvore B+ com chaves `(idUsuario; idLista)`
 
+* **Código Compartilhável de Lista**:
 
-Licença
+  * Geração via [NanoID](https://github.com/aventrix/jnanoid)
 
-Projeto acadêmico — uso livre para fins educacionais.
+---
+
+## 📌 Observações
+
+* **Este repositório implementa o TP1**:
+
+  * Foco em **usuários** e **listas**
+  * **Produtos ainda não incluídos**
+
+---
+
+## 📄 Licença
+
+Projeto acadêmico — uso livre para **fins educacionais**.
