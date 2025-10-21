@@ -11,6 +11,7 @@ Sistema de Gerenciamento de Listas de Presentes
 * **Rafael Nascimento Jardim**
 * **Welbert Junio Afonso de Almeida**
 * **Gustavo Henrique Silva Maciel**
+* **Davi Wenzel Cury**
 
 ---
 
