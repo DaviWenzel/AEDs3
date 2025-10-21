@@ -4,6 +4,7 @@ Sistema de linha de comando para **gestão de listas de presentes**.
 Cada **Usuário** pode criar **N Listas**, e cada Lista possui um **código compartilhável (NanoID)** para consulta por terceiros.
 
 > 📽️[ Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
+> 
 > 📽️ [Vídeo de Apresentação TP2](https://www.youtube.com/watch?si=7E3g5fbp5sFOmfiV&v=s9rRcJV1k44&feature=youtu.be)
 
 
