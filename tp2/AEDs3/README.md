@@ -149,7 +149,7 @@ dados/
 | CRUD de usuários com índices              | ✅        | Hash extensível funcionando                          |
 | CRUD de listas com índices                | ✅        | Árvore B+ idUsuario→idLista                          |
 | CRUD de produtos (GTIN-13)                | ✅        | Implementado e testado                               |
-| Entidade de associação ListaProduto (N:N) | ✅        | Persistência e índices B+                            |
+| Entidade de associação ListaProduto (N:N) | ❌        | Persistência e índices B+                            |
 | Gestão de produtos dentro das listas      | ✅        | Adicionar, remover, alterar quantidade e observações |
 | Inativação de produtos                    | ✅        | Impede associação a novas listas                     |
 | Visualização de listas por código NanoID  | ✅        | Funcionando corretamente                             |
@@ -185,6 +185,7 @@ O vídeo de até **3 minutos** mostra:
 > 📽️ [Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
 
 > 📽️ [Vídeo de Apresentação TP2](https://www.youtube.com/watch?si=7E3g5fbp5sFOmfiV&v=s9rRcJV1k44&feature=youtu.be)
+
 
 
 
