@@ -185,19 +185,6 @@ java  -cp "bin;lib\jnanoid-2.0.0.jar" App
 * `philips` → barbeador
 * `oster` → liquidificador
 
----
-
-## 🧩 Telas (console)
-
-> Adicione aqui capturas de tela mostrando:
->
-> * Menu Principal
-> * Busca por palavras
-> * Resultado TF-IDF
-> * Cadastro / Edição de Produto
-> * Minhas Listas
-
----
 
 ## ✅ Checklist exigido
 
@@ -205,7 +192,7 @@ java  -cp "bin;lib\jnanoid-2.0.0.jar" App
 | -------------------------------------------------------------------------- | ------- | -------------------------------------------- |
 | O índice invertido usa `ListaInvertida`?                                   | ✅ Sim  | Implementado em `/base/ListaInvertida.java`  |
 | É possível buscar produtos por palavras no menu de produtos?               | ✅ Sim  | Opção “Buscar por palavras”                  |
-| É possível buscar produtos por palavras ao acrescentar produtos às listas? | 🟩 SIM | Integração com `ControleLista`               |
+| É possível buscar produtos por palavras ao acrescentar produtos às listas? | ✅ SIM | Integração com `ControleLista`               |
 | O trabalho compila corretamente?                                           | ✅ Sim  | Testado via linha de comando                 |
 | O trabalho funciona sem erros de execução?                                 | ✅ Sim  | Operações de CRUD e busca testadas           |
 | O trabalho é original do grupo?                                            | ✅ Sim  | Código escrito e documentado pelo grupo      |
@@ -224,22 +211,12 @@ java  -cp "bin;lib\jnanoid-2.0.0.jar" App
 
 ## 🎥 Vídeo de demonstração
 
-Gravar até **3 min** mostrando:
-
 1. Cadastro de produtos
 2. Busca por palavras
 3. Ranking TF×IDF
 4. Adição a listas
 
 📺 Link do vídeo: *(davi enserir link do youtube)*
-
----
-
-## 🪪 Licença
-
-Este projeto é de uso acadêmico — PUC Minas / ICEI.
-Sugestão: [MIT License](https://opensource.org/licenses/MIT)
-
 
 ---
 
@@ -276,3 +253,14 @@ Resultado ordenado por relevância (TF×IDF): **[3, 2, 4]**
 mkdir -p bin
 javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
 java  -cp "bin:lib/jnanoid-2.0.0.jar" App
+
+```
+---
+
+## 🪪 Licença
+
+Este projeto é de uso acadêmico — PUC Minas / ICEI.
+Sugestão: [MIT License](https://opensource.org/licenses/MIT)
+
+
+---
