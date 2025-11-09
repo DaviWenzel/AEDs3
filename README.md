@@ -1,5 +1,5 @@
 
-```
+
 # 🧩 PresenteFácil 1.0 — TP3 (Índice Invertido)
 
 
@@ -11,6 +11,7 @@ Requisito: JDK 17+ instalado.
 
 rm -rf bin dados/*
 mkdir -p bin
+
 javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
 
 2.Executar
@@ -18,7 +19,7 @@ javac -cp lib/jnanoid-2.0.0.jar -d bin $(find . -name "*.java")
 java -cp "bin:lib/jnanoid-2.0.0.jar" App
 
 
-```
+
 ---
 
 # 🧩 PresenteFácil 1.0 — TP3 (Índice Invertido)
