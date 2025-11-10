@@ -16,7 +16,7 @@
 
 - **JDK 17+ instalado**
 
-### 🔄 1. Limpar e Compilar
+### 🔄 1. Limpar e Compilar (Visual studio Code)
 
 ```bash
 rm -rf bin dados/*
