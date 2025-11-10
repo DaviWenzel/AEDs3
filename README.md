@@ -1,5 +1,15 @@
 # 🧩 PresenteFácil 1.0 — TP3 (Índice Invertido)
 
+---
+
+## 👥 Participantes
+
+- **Rafael Nascimento Jardim**
+- **Welbert Junio Afonso de Almeida**
+- **Gustavo Henrique Silva Maciel**
+- **Davi Wenzel Cury**
+---
+
 ## 🛠️ Como Compilar e Executar
 
 ### ✅ Requisito
@@ -29,14 +39,6 @@ Este trabalho implementa **busca por produtos via palavras (índice invertido co
 
 > **Tecnologias:** Java 17+, I/O com `RandomAccessFile`, Hash Extensível, Árvore B+ e Índice Invertido (TF-IDF).
 
----
-
-## 👥 Participantes
-
-- **Rafael Nascimento Jardim**
-- **Welbert Junio Afonso de Almeida**
-- **Gustavo Henrique Silva Maciel**
-- **Davi Wenzel Cury**
 
 ---
 
