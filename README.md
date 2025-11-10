@@ -94,21 +94,21 @@ AEDs3TP3/
 ├── lib/ → Dependências externas
 │ └── jnanoid-2.0.0.jar
 │
-└── dados/ → Arquivos de dados e índices persistidos (.db)
-├── usuarios.db → Tabela principal de usuários
-├── usuarios.email.idx*{d,c}.db → Índice hash extensível de e-mails
-├── listas.db → Tabela principal de listas de presentes
-├── listas.usuario.idx.db → Índice árvore B+ (usuário → lista)
-├── produtos.db → Tabela principal de produtos
-├── listaproduto.db → Relacionamento N:N (lista ↔ produto)
-├── listaproduto.idxLista.db → Índice B+ (idLista → idListaProduto)
-├── listaproduto.idxProduto.db → Índice B+ (idProduto → idListaProduto)
-├── dicionario.listainv.db → Dicionário do índice invertido
-├── dicionario.listainv.hash*{c,d}.db → Arquivos auxiliares do índice invertido
-├── lista.listainv.db → Blocos contendo as listas invertidas
-├── lista.listainv.hash*{c,d}.db → Arquivos auxiliares de listas invertidas
-├── blocos.listainv.db → Dados normalizados das palavras indexadas
-└── produtos.db.hash*{c,d}.db → Índices hash de produtos
+└── dados/                               → Arquivos de dados e índices persistidos (.db)
+├── usuarios.db                          → Tabela principal de usuários
+├── usuarios.email.idx*{d,c}.db          → Índice hash extensível de e-mails
+├── listas.db                            → Tabela principal de listas de presentes
+├── listas.usuario.idx.db                → Índice árvore B+ (usuário → lista)
+├── produtos.db                          → Tabela principal de produtos
+├── listaproduto.db                      → Relacionamento N:N (lista ↔ produto)
+├── listaproduto.idxLista.db             → Índice B+ (idLista → idListaProduto)
+├── listaproduto.idxProduto.db           → Índice B+ (idProduto → idListaProduto)
+├── dicionario.listainv.db               → Dicionário do índice invertido
+├── dicionario.listainv.hash*{c,d}.db    → Arquivos auxiliares do índice invertido
+├── lista.listainv.db                    → Blocos contendo as listas invertidas
+├── lista.listainv.hash*{c,d}.db         → Arquivos auxiliares de listas invertidas
+├── blocos.listainv.db                   → Dados normalizados das palavras indexadas
+└── produtos.db.hash*{c,d}.db            → Índices hash de produtos
 ```
 
 ---
