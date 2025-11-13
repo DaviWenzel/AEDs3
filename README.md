@@ -31,6 +31,28 @@ java -cp "bin:lib/jnanoid-2.0.0.jar" App
 ```
 
 ---
+## 📹 Vídeo de Demonstração
+
+O vídeo de até **3 minutos** mostra:
+
+* Cadastro e login
+* Criação e listagem de listas
+* Cadastro de produtos
+* Associação de produtos às listas
+* Busca de lista por código
+
+ 📽️ [Vídeo de Apresentação TP1](https://youtu.be/NpyloV69Be0)
+
+ 📽️ [Vídeo de Apresentação TP2](https://www.youtube.com/watch?si=7E3g5fbp5sFOmfiV&v=s9rRcJV1k44&feature=youtu.be)
+
+* Cadastro de produtos
+* Busca por palavras
+* Ranking TF×IDF
+* Adição a listas
+
+ 📽️ [Vídeo de Apresentação TP3](https://youtu.be/0hineopwbmE)
+
+---
 
 # 🧩 PresenteFácil 1.0 — TP3 (Índice Invertido)
 
@@ -208,16 +230,6 @@ java  -cp "bin;lib\jnanoid-2.0.0.jar" App
 - **Hash Extensível:** índices diretos de entidades.
 - **TextUtils:** remove acentos e filtra stop words.
 
----
-
-## 🎥 Vídeo de demonstração
-
-1. Cadastro de produtos
-2. Busca por palavras
-3. Ranking TF×IDF
-4. Adição a listas
-
-📺 Link do vídeo: _(davi enserir link do youtube)_
 
 ---
 
