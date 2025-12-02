@@ -27,6 +27,87 @@ function saveLocal(data) {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
 }
 
+function generateBinaryStructure() {
+    const view = document.getElementById('binaryStructureView');
+    
+    if (products.length === 0) {
+        view.textContent = "Arquivo vazio (apenas cabeçalho de 4 bytes)\n\n" +
+                          "Cabeçalho: [00000000] [00000000] [00000000] [00000000] (último ID = 0)";
+        return;
+    }
+    
+    let output = "Cabeçalho (4 bytes):\n";
+    output += `[${(nextId-1).toString(2).padStart(32, '0').match(/.{8}/g).join('] [')}] (último ID = ${nextId-1})\n\n`;
+
+    
+    output += "--------------------------------------------------\n\n";
+    
+    // Simula como ficaria no arquivo binário
+    let currentPosition = 4; // Começa após o cabeçalho
+    
+    products.forEach((prod, index) => {
+        output += `Registro ${index+1} (ID: ${prod.id}) - Posição: 0x${currentPosition.toString(16).toUpperCase()}\n`;
+        
+        // Lápide 
+        output += "  Lápide:     [00100000] (0x20 = ' ' = ativo)\n";
+        
+        // Calcula tamanho aproximado do registro em bytes
+        // Simula: id(4) + campos de string (nome + descricao + categoria + prioridade + observacoes)
+        const nomeBytes = new TextEncoder().encode(prod.nome || '').length;
+        const descricaoBytes = new TextEncoder().encode(prod.descricao || '').length;
+        const categoriaBytes = new TextEncoder().encode(prod.categoria || '').length;
+        const prioridadeBytes = new TextEncoder().encode(prod.prioridade || '').length;
+        const observacoesBytes = new TextEncoder().encode(prod.observacoes || '').length;
+        
+        const totalSize = 4 + // id (int)
+                         nomeBytes + 1 + // nome + terminador
+                         descricaoBytes + 1 + // descricao + terminador
+                         categoriaBytes + 1 + // categoria + terminador
+                         prioridadeBytes + 1 + // prioridade + terminador
+                         observacoesBytes + 1; // observacoes + terminador
+        
+        const sizeBytes = totalSize.toString(2).padStart(16, '0');
+        output += `  Tamanho:    [${sizeBytes.substring(0,8)}] [${sizeBytes.substring(8)}] (${totalSize} bytes)\n`;
+        
+        output += "  Dados:\n";
+        output += `    ID:          ${prod.id}\n`;
+        output += `    Nome:        "${prod.nome || ''}" (${nomeBytes} bytes)\n`;
+        output += `    Descrição:   "${prod.descricao || ''}" (${descricaoBytes} bytes)\n`;
+        output += `    Categoria:   "${prod.categoria || ''}" (${categoriaBytes} bytes)\n`;
+        output += `    Prioridade:  "${prod.prioridade || ''}" (${prioridadeBytes} bytes)\n`;
+        output += `    Observações: "${prod.observacoes || ''}" (${observacoesBytes} bytes)\n`;
+        
+        // Representação hexadecimal aproximada
+        output += "\n  Representação hexadecimal (simplificada):\n";
+        output += "    20 "; // Lápide ' '
+        
+   
+        const sizeLE1 = totalSize & 0xFF;
+        const sizeLE2 = (totalSize >> 8) & 0xFF;
+        output += `${sizeLE1.toString(16).padStart(2, '0')} ${sizeLE2.toString(16).padStart(2, '0')} `;
+        
+
+        for (let i = 0; i < 4; i++) {
+            const byte = (prod.id >> (i * 8)) & 0xFF;
+            output += `${byte.toString(16).padStart(2, '0')} `;
+        }
+        
+        output += "... [dados dos campos]\n";
+        
+        currentPosition += 1 + 2 + totalSize; // Lápide + Tamanho + Dados
+        
+        if (index < products.length - 1) {
+            output += "\n  ---\n\n";
+        }
+    });
+    
+    output += "\n--------------------------------------------------\n";
+    output += `Tamanho total do arquivo: ${currentPosition} bytes\n`;
+    output += `Número de registros: ${products.length}`;
+    
+    view.textContent = output;
+}
+
 async function loadAndRenderProducts() {
     products = getLocal();
     nextId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
@@ -114,7 +195,7 @@ window.handleSearch = function() {
 
 function renderProducts(search = '') {
     const tbody = document.getElementById('presentTableBody');
-    const view = document.getElementById('localStorageView');
+    const jsonView = document.getElementById('localStorageView');
     const empty = document.getElementById('emptyMessage');
 
     tbody.innerHTML = '';
@@ -153,7 +234,9 @@ function renderProducts(search = '') {
         acoes.appendChild(b2);
     });
 
-    view.textContent = JSON.stringify(products, null, 2);
+    // Atualiza ambas as visualizações
+    jsonView.textContent = JSON.stringify(products, null, 2);
+    generateBinaryStructure();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
