@@ -135,17 +135,33 @@
 
         </main>
 
-        <section class="mt-8 bg-gray-800 p-6 rounded-xl shadow-xl">
-            <h2 class="text-xl font-semibold text-gray-100 mb-4">
-                Visualização do Conteúdo do "Arquivo" (LocalStorage)
-            </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            <!-- Seção JSON -->
+            <section class="bg-gray-800 p-6 rounded-xl shadow-xl">
+                <h2 class="text-xl font-semibold text-gray-100 mb-4">
+                    Visualização do Conteúdo do "Arquivo" (LocalStorage)
+                </h2>
 
-            <p class="text-sm text-gray-400 mb-4">
-                Aqui você vê exatamente como os registros estão armazenados de forma sequencial.
-            </p>
+                <p class="text-sm text-gray-400 mb-4">
+                    Aqui você vê exatamente como os registros estão armazenados de forma sequencial.
+                </p>
 
-            <pre id="localStorageView" class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-x-auto"></pre>
-        </section>
+                <pre id="localStorageView" class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-x-auto max-h-[300px] overflow-y-auto"></pre>
+            </section>
+
+            <!-- Seção Estrutura de Arquivo Binário -->
+            <section class="bg-gray-800 p-6 rounded-xl shadow-xl">
+                <h2 class="text-xl font-semibold text-gray-100 mb-4">
+                    Estrutura do Arquivo Binário (Simulação)
+                </h2>
+
+                <p class="text-sm text-gray-400 mb-4">
+                    Simulação da estrutura de armazenamento em arquivo binário com lápide e tamanho.
+                </p>
+
+                <pre id="binaryStructureView" class="bg-gray-900 text-blue-300 p-4 rounded-lg overflow-x-auto max-h-[300px] overflow-y-auto font-mono text-sm"></pre>
+            </section>
+        </div>
 
     </div>
 
