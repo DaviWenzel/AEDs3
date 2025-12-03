@@ -26,7 +26,7 @@ A aplicação permite:
 
 * Cadastrar produtos
 * Listar os produtos armazenados
-* Consultar produtos por nome ou ID
+* Consultar produtos por nome,ID ou nome do produto.
 * Editar produtos já cadastrados
 * Excluir produtos
 * Persistência automática dos dados no LocalStorage
@@ -60,6 +60,7 @@ A aplicação foi estruturada da seguinte forma:
 | Editar | Permite modificar qualquer campo do produto. |
 | Excluir | Remove o produto permanentemente. |
 | Persistência local | Dados salvos mesmo após fechar a página (LocalStorage). |
+| Vizualização do Arquivo | Mostra como os produtos estão armazenados. |
 
 ---
 
@@ -74,6 +75,15 @@ A aplicação foi estruturada da seguinte forma:
 ---
 
 ## 5. Afirmativas Usadas (Escala Likert: 1 a 5)
+| :---: | :--- | :---: |
+| 1 | A aplicação facilita a compreensão do funcionamento do CRUD. |
+| 2 | As funções principais são fáceis de localizar.|
+| 3 | O sistema é intuitivo, mesmo para quem nunca usou. |
+| 4 | As mensagens são claras e úteis. | 
+| 5 | A visualização dos produtos ajuda a entender como os dados são armazenados. |
+| 6 | A edição e exclusão de registros é simples de realizar. |
+| 7 | O fluxo das tarefas é natural e sem ambiguidades. |
+| 8 | A aparência da interface contribui para uma boa experiência de uso. |
 
 | Item | Afirmativa resumida | Média |
 | :---: | :--- | :---: |
@@ -97,7 +107,7 @@ A aplicação foi estruturada da seguinte forma:
 | A página web com a visualização interativa do CRUD de produtos foi criada? | **Sim** | Todas as operações CRUD estão implementadas. |
 | Há um vídeo de até 3 minutos demonstrando o uso da visualização? | **Sim** | Vídeo gravado e disponibilizado no repositório/YouTube. |
 | O trabalho foi criado apenas com HTML, CSS e JS? | **Sim** | Não utilizamos frameworks. |
-| O relatório do trabalho foi entregue no APC? | **Sim** | O relatório está incluído no repositório e na entrega. |
+| O relatório do trabalho foi entregue no APC? |  |  |
 | O trabalho está completo e funcionando sem erros de execução? | **Sim** | Todos os testes foram realizados com sucesso. |
 | O trabalho é original e não é cópia de outro grupo? | **Sim** | Todo o código foi produzido para este TP. |
 
