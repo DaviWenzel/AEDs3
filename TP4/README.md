@@ -84,13 +84,21 @@ Verifique se ele saiu da lista.
 5.Afirmativas usadas (escala Likert: 1 a 5)
 
 1.A aplicação facilita a compreensão do funcionamento do CRUD.
+
 2.As funções principais são fáceis de localizar.
+
 3.O sistema é intuitivo, mesmo para quem nunca usou.
+
 4.As mensagens são claras e úteis.
+
 5.A visualização dos produtos ajuda a entender como os dados são armazenados.
+
 6.A edição e exclusão de registros é simples de realizar.
+
 7.O fluxo das tarefas é natural e sem ambiguidades.
+
 8.A aparência da interface contribui para uma boa experiência de uso.
+
 
 | Item | Afirmativa resumida    | Média |
 | ---- | ---------------------- | ----- |
