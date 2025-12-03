@@ -21,21 +21,21 @@ Este trabalho consiste no desenvolvimento de uma página web interativa para dem
 
 A aplicação permite:
 
-Cadastrar produtos
+-Cadastrar produtos
 
-Listar os produtos armazenados
+=Listar os produtos armazenados
 
-Consultar produtos por nome ou ID
+=Consultar produtos por nome ou ID
 
-Editar produtos já cadastrados
+=Editar produtos já cadastrados
 
-Excluir produtos
+=Excluir produtos
 
-Persistência automática dos dados no LocalStorage
+=Persistência automática dos dados no LocalStorage
 
-A interface foi criada com HTML, CSS e JavaScript puros, sem bibliotecas externas.
+2.A interface foi criada com HTML, CSS e JavaScript puros, sem bibliotecas externas.
 
-2. Estrutura do Sistema (Classes / Arquitetura)
+3. Estrutura do Sistema (Classes / Arquitetura)
 
 A aplicação foi estruturada da seguinte forma:
 
@@ -43,12 +43,12 @@ Arquivo principal
 
 index.html
 Contém toda a estrutura da interface, incluindo formulários de cadastro/edição e tabela de visualização dos produtos.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Arquivo de estilo
 
 styles.css
 Contém as regras de estilo para organização visual da página.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Arquivo de lógica
 
 script.js
@@ -60,7 +60,7 @@ Atualizar o LocalStorage
 Exibir mensagens de sucesso/erro
 
 Atualizar a tabela principal
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Funcionalidades implementadas:
   Funcionalidade	Descrição
   Criar produto	Adiciona um novo produto ao LocalStorage
@@ -68,8 +68,8 @@ Funcionalidades implementadas:
   Editar	Permite modificar qualquer campo do produto
   Excluir	Remove o produto permanentemente
   Persistência local	Dados salvos mesmo após fechar a página
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-3.Roteiro de Testes Usado com os Alunos
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Roteiro de Testes Usado com os Alunos
 
 Cadastre um produto chamado kindle paperwhite, Pessoa Ana Costa, categoria eletrônica,prioridade alta e um comentario.
 
@@ -80,8 +80,8 @@ Atualize a proridade do produto,categoria,nome e prioridade.
 Exclua o produto.
 
 Verifique se ele saiu da lista.
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4.Afirmativas usadas (escala Likert: 1 a 5)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Afirmativas usadas (escala Likert: 1 a 5)
 
 1.A aplicação facilita a compreensão do funcionamento do CRUD.
 2.As funções principais são fáceis de localizar.
@@ -103,8 +103,8 @@ Verifique se ele saiu da lista.
 | 7    | Fluxo natural          | 4,8   |
 | 8    | Interface agradável    | 4,6   |
 A maior parte dos usuários considerou a aplicação eficiente e satisfatória, destacando a clareza das mensagens e a boa visualização dos dados.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-5.Pergunta                                                                   | Resposta | Justificativa                                           |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.Pergunta                                                                   | Resposta | Justificativa                                           |
 | -------------------------------------------------------------------------- | -------- | ------------------------------------------------------- |
 | A página web com a visualização interativa do CRUD de produtos foi criada? | **Sim**  | Todas as operações CRUD estão implementadas.            |
 | Há um vídeo de até 3 minutos demonstrando o uso da visualização?           | **Sim**  | Vídeo gravado e disponibilizado no repositório/YouTube. |
